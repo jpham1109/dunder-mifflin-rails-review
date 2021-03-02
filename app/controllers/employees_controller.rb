@@ -31,14 +31,13 @@ class EmployeesController < ApplicationController
     end
 
     def update
-        employee = Employee.find(params[:id])
-        employee.update(employee_params)
+        @employee.update(employee_params)
     
-        if employee.valid?
-            redirect_to employee_path(employee)
+        if @employee.valid?
+            redirect_to employee_path(@employee)
         else 
-            flash[:errors] = employee.errors.full_messages
-            redirect_to edit_employee_path(employee)
+            flash[:errors] = @employee.errors.full_messages
+            redirect_to edit_employee_path(@employee)
         end 
     end
 
