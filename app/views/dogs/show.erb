@@ -1,0 +1,11 @@
+<h1> ✨🐶The Dog's Show Page 🐩✨ </h1>
+<main>
+  <h2> Information </h2>
+    <p><b> Name: </b><%= @dog.name %></p>
+    <p><b> Breed: </b><%= @dog.breed %></p>
+    <p><b> Age: </b><%= @dog.age.capitalize %></p>
+    <ul><% @dog.employees.each do |employee| %>
+      <li><%= link_to employee.full_name, employee_path(employee) %></li>
+    <% end %>
+    </ul>
+</main>

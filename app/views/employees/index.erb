@@ -1,0 +1,9 @@
+<h1>😄🧑🏻‍💻 Our Hard-Working Employees 👩🏼‍💻🤓</h1>
+<hr>
+<main>
+  <h2> Working for the Doggos </h2><hr>
+  <ul><% @employees.each do |employee| %>
+    <li><%= link_to employee.full_name, employee_path(employee) %></li>
+  <% end %>
+  </ul>
+</main>

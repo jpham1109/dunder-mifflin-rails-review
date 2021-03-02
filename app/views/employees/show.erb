@@ -1,0 +1,16 @@
+<h1> Employee's Page </h1>
+<hr>
+<main>
+  <h2> Information </h2><hr>
+    <ul>
+    <li><b> Name: </b><%= @employee.full_name %></li>
+    <li><b> Nickname: </b><%= @employee.alias %></li>
+    <li><b> Position: </b><%= @employee.title %></li>
+    <li><b> Office: </b><%= @employee.office %></li>
+    <li><b> Doggo: </b><%= link_to @employee.dog.name, @employee.dog  %></li>
+    <li><b> Profile picture: </b></li>
+    </ul>
+      <% if @employee.img_url %>
+        <%= image_tag @employee.img_url, height: 200, alt: "photo of employee" %>
+      <% end %>
+</main>

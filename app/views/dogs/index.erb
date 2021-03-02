@@ -1,0 +1,11 @@
+<h1> 🥳💖🐕✨All The Best Dogs ✨🦴💖🤩</h1>
+<hr>
+<main>
+  <h2> Our lovely resident canines </h2><hr>
+  <ul><% @dogs.each do |dog| %>
+    <li><%= link_to dog.name, dog_path(dog) %></li>
+  <% end %>
+  </ul>
+  <%= link_to "Sort dogs", sort_path %>
+
+</main>
